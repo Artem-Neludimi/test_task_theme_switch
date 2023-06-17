@@ -8,7 +8,6 @@ class ThemeProvider extends ChangeNotifier {
   var _currentTheme = AppTheme.light;
 
   ThemeData get currentTheme => _currentTheme;
-  bool get isDarkMode => _currentTheme == AppTheme.dark;
 
   void themeSwitch() {
     if (_currentTheme == AppTheme.light) {

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:test_task_theme_switch/ui/providers/theme_provider.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -13,7 +11,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    var isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
+    var isDarkMode = theme.brightness == Brightness.dark;
 
     return Scaffold(
       appBar: AppBar(
